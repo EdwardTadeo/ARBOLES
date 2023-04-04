@@ -1,0 +1,45 @@
+body{
+    background-color: antiquewhite;
+}
+
+h1{
+    justify-content: center;
+    text-align: center;
+}
+.main{
+    position: relative;
+    background-color: aquamarine;
+    width: 800px;
+    left: 20%;
+}
+.buttons{
+    position: relative;
+    top: -10px;
+    left: 20px;
+}
+.tipo1{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 65%;
+    background-color: #303952;
+    border-radius: 10px;
+    z-index: 9999;
+    color: white;
+    text-align: center; 
+}
+.tipo2{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 65%;
+    background-color: #e2d40c;
+    border-radius: 10px;
+    z-index: 9999;
+    color: white;
+    text-align: center; 
+}

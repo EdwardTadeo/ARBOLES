@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIPO DE CREDITO</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>SOLICITUD DE CREDITO</h1>
+    <div class="main">
+        <h3>Seleccione el tipo de crédito que desea solicitar</h3>
+        <div class="buttons">
+            <button onclick="mostrara()">CREDITO A</button>
+            <button onclick="mostrarb()">CREDITO B</button>
+        </div>
+    </div>
+
+    <div class="tipo1" style="display: none;" id="TIPOA">
+        <p>"¿Es usted cliente de la entidad? (Sí o No): "</p>
+        <button>SI</button>
+        <button onclick="NOA()">NO</button>
+        <div id="noA" style="display: none;" >
+            <p>"Por favor, presente sus antecedentes personales: "</p>
+            <input type="file">
+            <p>"¿Es usted empleado? (Sí o No): "</p>
+            <button onclick="finSI()" id="sii">SI</button>
+            <button onclick="finNO()" id="noo">NO</button>
+            <p style="display: none;" id="finNO">"Por favor, presente su última declaración de impuestos: "</p>
+            <p style="display: none;" id="finSI">"Por favor, presente sus cuatro últimas liquidaciones de sueldo: "</p>
+            <div id="finalazo" style="display: none;">
+                <input type="file" onclick="menfinal()">
+                
+            </div>
+            <h1 id="pollo" style="display: none;">FELICIDADES SI PUEDE ACCEDER AL CREDITO A</h1>
+        </div>
+    </div>
+    <div class="tipo2" style="display: none;" id="TIPOB">
+
+    </div>
+</body>
+</html>
