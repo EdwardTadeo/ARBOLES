@@ -64,6 +64,7 @@ function mostrarb() {
       x.style.display = 'none';
     }
 }
+//---------------------------------------------------------------------------------------------------\\
 function NOA() {
     var x = document.getElementById('noA');
     if (x.style.display === 'none') {
@@ -92,7 +93,6 @@ function finSI(){
     var z = document.getElementById('finalazo');
     if (x.style.display === 'none') {
       x.style.display = 'block';
-      console.log("patata");
       y.disabled=true;
       z.style.display='block';
     } else {
@@ -109,5 +109,42 @@ function menfinal() {
     } else {
         x.style.display = 'none';
     }
+}
+//----------------------------------------------------------------------------------------------\\
+function SIA() {
+  var x = document.getElementById('siA');
+    if (x.style.display === 'none') {
+      x.style.display = 'block';
+      console.log("patata");
+    } else {
+      x.style.display = 'none';
+    }
+}
+function validarNumero(input) {
+  // Eliminar caracteres no numéricos
+  input.value = input.value.replace(/[^0-9]/g, '');
+  
+  // Agregar "S/." antes del número
+  if (input.value !== '') {
+    input.value = 'S/.' + input.value;
+  }
+}
+function enviarFormulario() {
+  var montoInput = document.getElementById("montoInput");
+  var monto = montoInput.value.replace('S/.', ''); // Eliminar "S/." del valor
+  var solicitudSimple = document.getElementById("solicitudSimple");
+  var empleado = document.getElementById("empleado");
+  if (monto > 5000) {
+    solicitudSimple.style.display = "block";
+    empleado.style.display = "none";
+    console.log("patata")
+  } else {
+    solicitudSimple.style.display = "none";
+    empleado.style.display = "block";
+    console.log("patata")
+  }
+  
+  // Evitar que se envíe el formulario
+  event.preventDefault();
 }
 

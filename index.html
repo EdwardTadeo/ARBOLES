@@ -20,21 +20,37 @@
 
     <div class="tipo1" style="display: none;" id="TIPOA">
         <p>"¿Es usted cliente de la entidad? (Sí o No): "</p>
-        <button>SI</button>
+        <button onclick="SIA()" autofocus>SI</button>
         <button onclick="NOA()">NO</button>
         <div id="noA" style="display: none;" >
             <p>"Por favor, presente sus antecedentes personales: "</p>
-            <input type="file">
+            <input type="file"> <button>NO</button>
             <p>"¿Es usted empleado? (Sí o No): "</p>
             <button onclick="finSI()" id="sii">SI</button>
             <button onclick="finNO()" id="noo">NO</button>
             <p style="display: none;" id="finNO">"Por favor, presente su última declaración de impuestos: "</p>
             <p style="display: none;" id="finSI">"Por favor, presente sus cuatro últimas liquidaciones de sueldo: "</p>
             <div id="finalazo" style="display: none;">
-                <input type="file" onclick="menfinal()">
+                <input type="file" onclick="menfinal()"><button>NO</button>
                 
             </div>
             <h1 id="pollo" style="display: none;">FELICIDADES SI PUEDE ACCEDER AL CREDITO A</h1>
+        </div>
+        <div id="siA" style="display: none;">
+            <p>Ingrese su promedio mensual: "</p>
+            <input type="text" id="montoInput" oninput="validarNumero(this)" placeholder="Ingrese el monto">
+            <input type="submit" value="Enviar" onclick="enviarFormulario()"> 
+            <div id="solicitudSimple" style="display:none;">
+                <p>Llene una solicitud simple.</p> 
+            </div>
+            <div id="empleado" style="display:none;">
+                <p>¿Es usted empleado? (Sí o No):</p>
+                <button onclick="finSI()" id="sii">SI</button>
+                <button onclick="finNO()" id="noo">NO</button>
+                <p style="display: none;" id="finNO">"Por favor, presente su última declaración de impuestos: "</p>
+                <p style="display: none;" id="finSI">"Por favor, presente sus cuatro últimas liquidaciones de sueldo: "</p>
+            </div>
+            
         </div>
     </div>
     <div class="tipo2" style="display: none;" id="TIPOB">

@@ -9,7 +9,7 @@ h1{
 .main{
     position: relative;
     background-color: aquamarine;
-    width: 800px;
+    width: 60%;
     left: 20%;
 }
 .buttons{
@@ -43,3 +43,54 @@ h1{
     color: white;
     text-align: center; 
 }
+input {
+    text-overflow: ellipsis;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+    width: 60%;
+    margin-left: 17%;
+    margin-bottom: 2%;
+    padding: 3px 12px;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 4px;
+    transition: all .15s;
+    cursor: pointer;
+    
+  }
+  
+  input::-webkit-file-upload-button {
+    padding: 4px 8px;
+    margin: -4px -12px;
+    margin-inline-end: 8px;
+    border: none;
+    height: 32px;
+    cursor: pointer;
+  }
+  button {
+    display: inline-block;
+    height: 6%;
+    width: 10%;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color .2s linear;
+  }
+  
+  button::before,
+  button::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
+  
+  button:hover {
+    color: white;
+  }
+  
